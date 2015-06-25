@@ -3,7 +3,7 @@
 #include <WaspSensorCities.h>
 
 // CONSTANTS
-#define FRAME_DELAY_TIME 1 //millisecond
+#define FRAME_DELAY_TIME 1000 //delay time between readings (milliseconds)
 //SENSORS
 bool readAudio= true; 
 bool readLuminosity = true; 
@@ -17,7 +17,7 @@ char frameToken ='$';
 void setup() {
   // Turn on the USB and print a start message
   USB.ON();
-  USB.println(F("Smart Cities Board Start"));
+  USB.println(F("ESUM_Smart_Cities_Board"));
 
   getBatteryReading(); 
   delay(100);
